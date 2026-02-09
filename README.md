@@ -25,7 +25,7 @@ Website fullstack untuk mengelola peminjaman peralatan studio (kamera, lensa, da
 - **Item**: `available`, `not available`
 - **Loan**: `pending`, `approved`, `rejected`, `returned`
 
-
+---
 
 ## Alur Peminjaman
 
@@ -34,3 +34,43 @@ Website fullstack untuk mengelola peminjaman peralatan studio (kamera, lensa, da
 3. Status loan: **pending**
 4. Admin approve peminjaman → Status loan: **approved** → Item status: **not available**
 5. Setelah dikembalikan, admin approve return → Status loan: **returned** → Item status: **available**
+
+
+## 🚀 Instalasi & Setup
+
+### 1. Database Setup (HeidiSQL/Laragon)
+
+1. Buka HeidiSQL atau phpMyAdmin
+2. Import file `database/schema.sql`
+3. Database `db_lumixor_studio` akan otomatis terbuat dengan sample data
+
+**Default Users:**
+- Admin: `admin@lumixor.com` / `admin123`
+- User: `john@lumixor.com` / `user123`
+
+### 2. Backend Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Jalankan server (development mode)
+npm run dev
+```
+
+Server akan berjalan di: **http://localhost:3000**
+
+### 3. Frontend Setup
+
+```bash
+# Masuk ke folder client
+cd client
+
+# Install dependencies
+npm install
+
+# Jalankan dev server
+npm run dev
+```
+
+Frontend akan berjalan di: **http://localhost:5173**
